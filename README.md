@@ -1,3 +1,16 @@
-<h1> Cadastro básico utilizando Cypress</h1>
+# Basic registration form with Cypress
 
-<p> Este projeto mostra como utilizar o Cypress para a automação de uma página web onde um formulário de cadastro é preenchido com dados aleatórios utilizando o Chance.js. Ele também conta com uma relatório de testes em html que é montado com o mochawesome report  </p>
+#### This project show how to use Cypress framework to fill a registration form from webpage, using ramdom data, ending report and CI. 
+
+## Tecnologies use:
++ Cypress
++ Chance JS
++ Mochawesome
++ Github Actions
+
+## How to run the application:
++ download the code from github
++ in the terminal, execute this command line: 
+  + npm init -y
+  + npm install cypress -D
+  + npm run cy-open
