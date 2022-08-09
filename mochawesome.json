@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-08-09T19:48:35.492Z",
+    "end": "2022-08-09T19:48:48.337Z",
+    "duration": 12845,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c353b611-7c4f-4358-8225-392ec026d5da",
+      "title": "",
+      "fullFile": "cypress/integration/cadastro.spec.js",
+      "file": "cypress/integration/cadastro.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e333166d-38ee-4524-9c32-6d1ed4967ced",
+          "title": "Cadastro",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Quando eu informar os dados e finalizar, então o cadastro deverá ser efetuado com sucesso",
+              "fullTitle": "Cadastro Quando eu informar os dados e finalizar, então o cadastro deverá ser efetuado com sucesso",
+              "timedOut": null,
+              "duration": 412,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[id=\"id_gender1\"]').check();\nvar firstName = cy.get('input[id=\"customer_firstname\"]').type(chance.first());\nvar lastName = cy.get('input[id=\"customer_lastname\"]').type(chance.last());\ncy.get('input[id=\"passwd\"]').type(chance.string({\n  length: 5\n}));\ncy.get('select[id=\"days\"]').select(chance.integer({\n  min: 1,\n  max: 31\n}));\ncy.get('select[id=\"months\"]').select(chance.integer({\n  min: 1,\n  max: 12\n}));\ncy.get('select[id=\"years\"]').select('1987');\ncy.get('input[id=\"newsletter\"]').check();\ncy.get('input[id=\"optin\"]').check();\ncy.get('input[id=\"firstname\"]').type(`${firstName}`);\ncy.get('input[id=\"lastname\"]').type(`${lastName}`);\ncy.get('input[id=\"company\"]').type(chance.company());\ncy.get('input[id=\"address1\"]').type(chance.address());\ncy.get('input[id=\"city\"]').type(chance.city());\ncy.get('select[id=\"id_state\"]').select('California', {\n  force: true\n});\ncy.get('input[id=\"postcode\"]').type(chance.zip());\ncy.get('div[id=\"uniform-id_country\"]').type('United States');\ncy.get('textarea[id=\"other\"]').type(chance.string());\ncy.get('input[id=\"phone\"]').type(chance.phone());\ncy.get('input[id=\"phone_mobile\"]').type(chance.phone());\ncy.get('input[id=\"alias\"]').type(chance.string());\ncy.get('button[id=\"submitAccount\"]').click();\ncy.url('contain', 'my-account');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://automationpractice.com/index.php?controller=authentication&back=my-account\n\nThe response we received from your web server was:\n\n  > 508: Loop Detected\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Cadastro`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://automationpractice.com/index.php?controller=authentication&back=my-account\n\nThe response we received from your web server was:\n\n  > 508: Loop Detected\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Cadastro`\n    at http://automationpractice.com/__cypress/runner/cypress_runner.js:163591:84\n    at visitFailedByErr (http://automationpractice.com/__cypress/runner/cypress_runner.js:162912:12)\n    at http://automationpractice.com/__cypress/runner/cypress_runner.js:163571:13\n    at tryCatcher (http://automationpractice.com/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (http://automationpractice.com/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (http://automationpractice.com/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (http://automationpractice.com/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (http://automationpractice.com/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (http://automationpractice.com/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (http://automationpractice.com/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://automationpractice.com/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (http://automationpractice.com/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (http://automationpractice.com/__cypress/tests?p=cypress/integration/cadastro.spec.js:2212:8)",
+                "diff": null
+              },
+              "uuid": "19a894b3-423e-4b73-b656-803b7b15ffea",
+              "parentUUID": "e333166d-38ee-4524-9c32-6d1ed4967ced",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "19a894b3-423e-4b73-b656-803b7b15ffea"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 412,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
